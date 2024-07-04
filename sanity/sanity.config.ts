@@ -9,7 +9,7 @@ export default defineConfig({
   apiVersion:"v2022-03-07",
   projectId: 'oyeriaey',
   dataset: 'production',
-
+  useCdn: false,
   plugins: [structureTool(), visionTool()],
 
   schema: {
