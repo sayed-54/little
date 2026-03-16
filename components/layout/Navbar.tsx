@@ -59,19 +59,33 @@ export default function Navbar() {
     return () => document.removeEventListener("mousedown", handleClickOutside);
   }, []);
 
+  // Body scroll lock for mobile menu
+  useEffect(() => {
+    if (mobileMenuOpen) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = 'unset';
+    }
+    return () => {
+      document.body.style.overflow = 'unset';
+    };
+  }, [mobileMenuOpen]);
+
   const isShopActive = pathname.startsWith("/Products");
 
   return (
-    <header className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${scrolled ? 'bg-background/80 backdrop-blur-md shadow-sm border-b border-border/50 py-4' : 'bg-transparent py-6'}`}>
+    <header className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${
+      scrolled || mobileMenuOpen ? 'bg-background/95 backdrop-blur-md shadow-sm border-b border-border/50 py-4' : 'bg-transparent py-6'
+    }`}>
       <div className="container mx-auto px-6 md:px-12 flex items-center justify-between">
         
         {/* Mobile Menu Icon */}
         <button
-          className="lg:hidden text-foreground hover:text-primary transition-colors"
+          className="lg:hidden text-foreground hover:text-primary transition-colors relative z-[60]"
           onClick={toggleMobileMenu}
           aria-label="Toggle menu"
         >
-          {mobileMenuOpen ? <X size={28} /> : <Menu size={28} />}
+          {mobileMenuOpen ? <X size={28} className="text-foreground" /> : <Menu size={28} />}
         </button>
 
         {/* Logo */}
