@@ -1,6 +1,6 @@
 export default{
-    name:"sales"
-    ,title:"sales"
+    name:"sale"
+    ,title:"Sales"
     ,type:"document"
     ,fields:[
         {
@@ -42,6 +42,19 @@ export default{
               type:'array',
               title:'sizes',
               of:[{type:'string'}]
+          },
+          {
+            name: 'rating',
+            title: 'Rating',
+            type: 'number',
+            initialValue: 0,
+            validation: (Rule: any) => Rule.min(0).max(5)
+          },
+          {
+            name: 'reviewsCount',
+            title: 'Reviews Count',
+            type: 'number',
+            initialValue: 0
           }
     ]
 }
