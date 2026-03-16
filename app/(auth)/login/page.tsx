@@ -83,7 +83,7 @@ export default function LoginPage() {
             <Button 
               type="submit" 
               disabled={isLoading}
-              className="w-full h-14 rounded-xl font-bold text-lg flex items-center justify-center gap-2 group transition-all"
+              className="w-full h-14 rounded-xl font-bold text-lg flex items-center justify-center gap-2 group transition-all hover:bg-primary/90 hover:text-primary-foreground"
             >
               {isLoading ? (
                 <Loader2 className="animate-spin" size={20} />
@@ -109,7 +109,7 @@ export default function LoginPage() {
             <Button 
               onClick={() => signIn("google", { callbackUrl: "/" })}
               variant="outline" 
-              className="w-full h-14 rounded-xl border-border hover:bg-muted font-semibold flex items-center justify-center gap-3 transition-all"
+              className="w-full h-14 rounded-xl border-border hover:bg-muted hover:text-foreground font-semibold flex items-center justify-center gap-3 transition-all"
             >
               <Chrome size={20} className="text-primary" />
               Continue with Google
