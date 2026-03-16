@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, useCallback } from "react";
 import { Star, MessageSquare, Loader2, CheckCircle2, ChevronDown } from "lucide-react";
 import { useSession } from "next-auth/react";
 import { Button } from "@/components/ui/button";
@@ -38,9 +38,10 @@ export default function ProductReviews({ productId }: { productId: string }) {
     }
   }, [session]);
 
-  const fetchReviews = async () => {
+  // Wrap in useCallback to safely include in useEffect below
+  const fetchReviews = useCallback(async () => {
+    setLoading(true);
     try {
-      setLoading(true);
       const res = await fetch(`/api/reviews?productId=${productId}`);
       const data = await res.json();
       setReviews(data.reviews || []);
@@ -49,11 +50,11 @@ export default function ProductReviews({ productId }: { productId: string }) {
     } finally {
       setLoading(false);
     }
-  };
+  }, [productId]);
 
   useEffect(() => {
     fetchReviews();
-  }, [productId]);
+  }, [fetchReviews]);
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();

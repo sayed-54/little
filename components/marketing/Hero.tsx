@@ -42,7 +42,7 @@ export default async function Hero() {
             Elevate Your <span className="text-primary italic block md:inline">Style.</span>
           </h1>
           <p className="text-lg md:text-xl text-foreground font-medium md:text-muted-foreground mb-10 max-w-xl mx-auto lg:mx-0 animate-in slide-in-from-bottom-8 duration-1000 delay-200 fade-in fill-mode-both drop-shadow-sm lg:drop-shadow-none">
-            Discover the most exclusive and high-quality curations designed for the modern lifestyle. Shop the new season's finest arrivals today.
+            Discover the most exclusive and high-quality curations designed for the modern lifestyle. Shop the new season&apos;s finest arrivals today.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start animate-in slide-in-from-bottom-8 duration-1000 delay-300 fade-in fill-mode-both">
             <Link 

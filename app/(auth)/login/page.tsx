@@ -135,7 +135,7 @@ export default function LoginPage() {
         <div className="mt-10 text-center">
           <p className="text-muted-foreground flex items-center justify-center gap-2">
             <ShoppingBag size={16} />
-            Don't have an account? <Link href="/signup" className="text-primary font-bold hover:underline">Join the Club</Link>
+            Don&apos;t have an account? <Link href="/signup" className="text-primary font-bold hover:underline">Join the Club</Link>
           </p>
         </div>
       </div>

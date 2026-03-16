@@ -101,7 +101,7 @@ export default function ProfilePage() {
             </div>
             <div>
                <h1 className="text-4xl font-heading font-extrabold text-foreground">
-                 {session?.user?.name}'s Dashboard
+                 {session?.user?.name}&apos;s Dashboard
                </h1>
                <p className="text-muted-foreground">{session?.user?.email}</p>
             </div>

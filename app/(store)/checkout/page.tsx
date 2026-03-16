@@ -177,7 +177,7 @@ export default function CheckoutPage() {
           </div>
           <h1 className="text-4xl font-heading font-bold text-foreground">Order Confirmed!</h1>
           <p className="text-muted-foreground text-lg">
-            Thank you for your purchase. We've received your order and will begin processing it shortly.
+            Thank you for your purchase. We&apos;ve received your order and will begin processing it shortly.
           </p>
           <div className="bg-muted rounded-lg p-4 font-mono text-sm text-foreground break-all border border-border">
             <span className="text-muted-foreground block mb-1">Order ID:</span>

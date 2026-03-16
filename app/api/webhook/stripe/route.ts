@@ -69,9 +69,9 @@ export async function POST(req: Request) {
       const order = await adminClient.create(orderDoc);
 
       // 2. Send Order Confirmation Email via Resend
-      if (session.customer_details?.email) {
+      if (session.customer_details?.email && resend) {
         await resend.emails.send({
-          from: "Little Locals <orders@littlelocals.com>", // User should configure domain in Resend
+          from: "Little Locals <sayedewas1234@gmail.com>",
           to: session.customer_details.email,
           subject: `Order Confirmed - #${session.id.slice(-8)}`,
           html: `
