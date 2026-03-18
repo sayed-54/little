@@ -22,7 +22,9 @@ export default function LayoutWrapper({ children }: { children: React.ReactNode 
       <CartProvider>
         <Navbar />
         <ShoppingCartModel />
-        {children}
+        <main className="min-h-screen pt-[70px] lg:pt-[90px]">
+          {children}
+        </main>
         <Footer />
         <ToastContainer position="bottom-right" />
       </CartProvider>

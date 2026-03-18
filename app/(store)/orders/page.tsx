@@ -49,7 +49,7 @@ export default async function OrdersPage() {
   const orders = await getUserOrders(session.user.id);
 
   return (
-    <div className="min-h-screen bg-background py-12 lg:py-24 mt-[80px]">
+    <div className="min-h-screen bg-background py-12 lg:py-24">
       <div className="container mx-auto px-4 max-w-5xl">
         <div className="grid md:grid-cols-4 gap-8">
 

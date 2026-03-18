@@ -93,7 +93,7 @@ export default function ProfilePage() {
   }
 
   return (
-    <div className="min-h-screen bg-background py-12 lg:py-24 mt-[80px]">
+    <div className="min-h-screen bg-background py-12 lg:py-24">
       <div className="container mx-auto px-4 max-w-5xl">
         <div className="flex flex-col md:flex-row gap-8 items-end mb-12">
             <div className="w-24 h-24 rounded-full bg-primary/10 flex items-center justify-center text-primary text-3xl font-bold uppercase border border-primary/20">
